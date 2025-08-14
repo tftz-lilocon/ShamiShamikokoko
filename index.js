@@ -13,6 +13,8 @@ var StoneX=0;
 var TheScore=0;
 //记录分数
 
+    var theVH=(window.innerHeight)/100;
+    var theVW=(window.innerWidth)/100;
 
 //让夏美子向上移动
 function ShamikoUp(){
@@ -43,8 +45,7 @@ function CheckStone(){
     var HighS=document.getElementById("HighStone");
     var LowS=document.getElementById("LowStone");
     
-    var theVH=(window.innerHeight)/100;
-    var theVW=(window.innerWidth)/100;
+
     //这一串都是确认现在shamiko在不在柱子附近
     var shamikoLeft=30*theVW;
     var shamikoWidth=20*theVW;
@@ -74,7 +75,8 @@ function CheckStone(){
 function StoneMove(){
     //设置长度
     document.getElementById("HighStone").style.height=`${StoneL}vh`;
-    document.getElementById("LowStone").style.height=`calc(100vh - ${StoneL}vh - 45vw`;
+    var LowLen=100*theVH-StoneL*theVH-45*theVW;
+    document.getElementById("LowStone").style.height=`${LowLen}px`;
     
     //运动过程
     StoneX=StoneX-0.5;
