@@ -1,0 +1,72 @@
+
+body{
+    background-color:#f0fcfc;
+}
+
+#shamiko{
+    height:20vw;
+    width:20vw;
+    background-image:url('./img/shamiko.png');
+    background-size:100% 100%;
+    margin:0;
+    padding:0;
+    position:fixed;
+    top:50vh;
+    left:30vw;
+    transition: transform 0.2s;
+}
+
+#DarkBoard{
+    height:100vh;
+    width:100vw;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:rgba(0,0,0,0.5);
+    display: none;
+}
+
+#Score{
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: transform 1s;
+    color:rgba(255,0,255,0.7);
+    font-size: 10vh;
+}
+
+#TryAgain{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 10vh;
+    width: 20vh;
+    background-image:url('./img/TryAgain.png');
+    background-size:100% 100%;
+    display: none;
+}
+
+#HighStone{
+    width:16vw;
+    height:30vh;
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    background-image:url('./img/HighStone.png');
+    background-size:100% 100%;
+    transition: transform 0.2s;
+}
+
+#LowStone{
+    width:16vw;
+    height:10vh;
+    position: fixed;
+    bottom: 0;
+    left: 100vw;
+    background-image:url('./img/LowStone.png');
+    background-size:100% 100%;
+    transition: transform 0.2s;
+}
