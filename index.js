@@ -158,6 +158,6 @@ function StartGame(){
     GameTime();
 }
 
-alert("叉子周围的金光的光之一族留下的，魔族碰到就会死哦~");
+alert("叉子周围的金光是光之一族留下的，魔族碰到就会死哦~");
 alert("补充：这些光是经过河流折射的，如果呈现紫色就是河流被污染了,请让莉莉丝小姐认真的去捡垃圾");
 document.addEventListener("click",StartGame,{ once:true });
