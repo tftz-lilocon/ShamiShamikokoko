@@ -13,8 +13,8 @@ var StoneX=0;
 var TheScore=0;
 //记录分数
 
-    var theVH=(window.innerHeight)/100;
-    var theVW=(window.innerWidth)/100;
+var theVH=(window.innerHeight)/100;
+var theVW=(window.innerWidth)/100;
 
 //让夏美子向上移动
 function ShamikoUp(){
@@ -45,14 +45,14 @@ function CheckStone(){
     var HighS=document.getElementById("HighStone");
     var LowS=document.getElementById("LowStone");
     
-
+    
     //这一串都是确认现在shamiko在不在柱子附近
     var shamikoLeft=30*theVW;
     var shamikoWidth=20*theVW;
     var SWidth=16*theVW;
     //柱子的左侧坐标小于shamiko的右侧坐标，柱子的右侧坐标大于shamiko的左侧坐标，他们就是相遇的
     
-    if((100+StoneX+3)*theVW <=(shamikoLeft+shamikoWidth) && ((100+StoneX-3)*theVW+SWidth) >= shamikoLeft){
+    if((100+StoneX+5)*theVW <=(shamikoLeft+shamikoWidth) && ((100+StoneX-5)*theVW+SWidth) >= shamikoLeft){
         //alert("魔族死了");
         
         if((50+ShamikoY+7)*theVH<StoneL*theVH){
@@ -61,7 +61,7 @@ function CheckStone(){
             ShamikoDeath=1;
         }
         
-        if((50+ShamikoY-7)*theVH + 15*theVW > StoneL*theVH+45*theVW){
+        if((50+ShamikoY-5)*theVH + 20*theVW > StoneL*theVH+40*theVW){
             //alert("魔族死了"+((50+ShamikoY-7)*theVH + 15*theVW)+" "+( StoneL*theVH+35*theVW));
             //ShamikoY=ShamikoY+5;
             ShamikoDeath=1;
@@ -75,7 +75,7 @@ function CheckStone(){
 function StoneMove(){
     //设置长度
     document.getElementById("HighStone").style.height=`${StoneL}vh`;
-    var LowLen=100*theVH-StoneL*theVH-45*theVW;
+    var LowLen=100*theVH-StoneL*theVH-40*theVW;
     document.getElementById("LowStone").style.height=`${LowLen}px`;
     
     //运动过程
@@ -158,6 +158,6 @@ function StartGame(){
     GameTime();
 }
 
-alert("叉子周围的金光是光之一族留下的，魔族碰到就会死哦~");
+alert("叉子周围的金光的光之一族留下的，魔族碰到就会死哦~");
 alert("补充：这些光是经过河流折射的，如果呈现紫色就是河流被污染了,请让莉莉丝小姐认真的去捡垃圾");
 document.addEventListener("click",StartGame,{ once:true });
